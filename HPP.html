@@ -1,0 +1,3528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<meta
+    name="theme-color"
+    content="#07070b"
+>
+
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+>
+
+<meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+>
+
+<title>Something I Never Told You ❤️</title>
+
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #07070b;
+}
+
+body {
+
+    color: #f8f1f1;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    overscroll-behavior: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -20;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(112, 35, 58, 0.22),
+            transparent 42%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(65, 30, 70, 0.18),
+            transparent 35%
+        ),
+
+        #07070b;
+}
+
+
+.background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 30%,
+            rgba(0,0,0,0.7) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.star {
+
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: 0.5;
+
+    animation:
+        twinkle 3s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+
+        opacity: 0.15;
+
+        transform:
+            scale(0.7);
+    }
+
+    50% {
+
+        opacity: 0.9;
+
+        transform:
+            scale(1.4);
+    }
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    animation:
+        floatHeart
+        linear
+        infinite;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 0.5;
+    }
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            translateX(25px)
+            scale(1);
+
+        opacity: 0.35;
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            translateX(-35px)
+            scale(0.8);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   FALLING PETALS
+===================================================== */
+
+.petal {
+
+    position: fixed;
+
+    top: -30px;
+
+    pointer-events: none;
+
+    z-index: 6;
+
+    opacity: 0;
+
+    animation:
+        fallingPetal
+        linear
+        infinite;
+}
+
+
+@keyframes fallingPetal {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 0.8;
+    }
+
+    50% {
+
+        transform:
+            translateY(50vh)
+            translateX(50px)
+            rotate(180deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            translateX(-40px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   FLOATING EMOJIS
+===================================================== */
+
+.floating-emoji {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 6;
+
+    opacity: 0;
+
+    animation:
+        floatingEmoji
+        linear
+        infinite;
+}
+
+
+@keyframes floatingEmoji {
+
+    0% {
+
+        transform:
+            translateY(100vh)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 0.55;
+    }
+
+    50% {
+
+        transform:
+            translateY(45vh)
+            translateX(35px)
+            rotate(15deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(-20vh)
+            translateX(-35px)
+            rotate(-15deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   STORY CONTAINER
+===================================================== */
+
+#story {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100dvh;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   PAGES
+===================================================== */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding:
+
+        60px
+        20px
+        105px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(70px)
+        scale(0.98);
+
+    transition:
+
+        opacity 0.65s ease,
+
+        transform 0.65s ease,
+
+        visibility 0.65s;
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0)
+        scale(1);
+}
+
+
+.page.previous {
+
+    transform:
+        translateX(-70px)
+        scale(0.98);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+    width:
+        min(850px, 94vw);
+
+    max-height:
+        calc(100dvh - 150px);
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.content::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.cover {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.cover-heart {
+
+    font-size:
+        clamp(48px, 15vw, 70px);
+
+    margin-bottom: 25px;
+
+    animation:
+        heartbeat
+        1.8s
+        infinite
+        ease-in-out;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(255,80,120,0.4)
+        );
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    15% {
+
+        transform:
+            scale(1.15);
+    }
+
+    30% {
+
+        transform:
+            scale(1);
+    }
+
+    45% {
+
+        transform:
+            scale(1.12);
+    }
+
+    60% {
+
+        transform:
+            scale(1);
+    }
+}
+
+
+.cover h1 {
+
+    font-size:
+        clamp(43px, 13vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.cover p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #c9c0c4;
+
+    font-size:
+        clamp(19px, 5vw, 25px);
+
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   CHAPTER
+===================================================== */
+
+.chapter-number {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #a78c95;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+.chapter h2 {
+
+    font-size:
+        clamp(39px, 11vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 28px;
+}
+
+
+.story-text {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    font-size:
+        clamp(19px, 5vw, 25px);
+
+    line-height: 1.55;
+
+    color: #d8d0d3;
+}
+
+
+.story-text p {
+
+    margin-bottom: 20px;
+}
+
+
+.highlight {
+
+    color: #ffb7c8;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+
+    margin:
+        28px
+        auto;
+
+    padding:
+        20px;
+
+    border-left:
+        1px solid
+        rgba(255,180,200,0.45);
+
+    border-right:
+        1px solid
+        rgba(255,180,200,0.45);
+
+    max-width: 650px;
+
+    font-style: italic;
+
+    color: #f0cbd4;
+
+    font-size:
+        clamp(21px, 5.5vw, 31px);
+}
+
+
+/* =====================================================
+   ANSWER BOX
+===================================================== */
+
+.answer-box {
+
+    max-width: 550px;
+
+    margin:
+        30px
+        auto;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.35);
+}
+
+
+.answer-box .small {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #988c91;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+
+.answer-box .answer {
+
+    font-size:
+        clamp(27px, 8vw, 42px);
+
+    color: #ffd4df;
+}
+
+
+/* =====================================================
+   PAGE 8 — LETTER PAGE
+===================================================== */
+
+.letter-page {
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        30px
+        12px
+        90px;
+}
+
+
+.ancient-letter-wrapper {
+
+    width: min(760px, 94vw);
+
+    height:
+        min(78dvh, 720px);
+
+    position: relative;
+
+    transform:
+        rotate(-0.8deg);
+
+    filter:
+        drop-shadow(
+            0 25px 35px
+            rgba(0,0,0,0.55)
+        );
+}
+
+
+/* =====================================================
+   ANCIENT PAPER
+===================================================== */
+
+.ancient-letter {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding:
+        55px
+        45px
+        80px;
+
+    text-align: left;
+
+    color: #4c3729;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+
+    scroll-behavior: smooth;
+
+    background:
+
+        radial-gradient(
+            ellipse at 20% 15%,
+            rgba(255,255,255,0.5),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(116,70,35,0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            120deg,
+            #eadbb7,
+            #dfc999,
+            #ead9b3
+        );
+
+    border:
+        1px solid
+        rgba(80,50,25,0.25);
+
+    box-shadow:
+
+        inset 0 0 45px
+        rgba(100,65,25,0.16),
+
+        inset 0 0 8px
+        rgba(70,40,15,0.15),
+
+        0 20px 50px
+        rgba(0,0,0,0.45);
+}
+
+
+.ancient-letter::-webkit-scrollbar {
+
+    display: none;
+}
+
+
+/* =====================================================
+   PAPER TEXTURE
+===================================================== */
+
+.ancient-letter::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.5;
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+            rgba(80,50,25,0.035) 0px,
+            rgba(80,50,25,0.035) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+
+        repeating-linear-gradient(
+            90deg,
+            rgba(80,50,25,0.025) 0px,
+            rgba(80,50,25,0.025) 1px,
+            transparent 1px,
+            transparent 6px
+        );
+}
+
+
+.ancient-letter::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    pointer-events: none;
+
+    border:
+        1px solid
+        rgba(88,55,28,0.13);
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(75,45,20,0.12);
+}
+
+
+/* =====================================================
+   TAPE
+===================================================== */
+
+.letter-tape {
+
+    position: absolute;
+
+    width: 125px;
+
+    height: 33px;
+
+    top: -12px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            rgba(226,207,157,0.85),
+            rgba(226,207,157,0.85) 8px,
+            rgba(196,171,113,0.85) 9px,
+            rgba(226,207,157,0.85) 12px
+        );
+
+    opacity: 0.85;
+
+    box-shadow:
+        0 3px 7px
+        rgba(0,0,0,0.15);
+
+    z-index: 10;
+}
+
+
+/* =====================================================
+   LETTER DATE
+===================================================== */
+
+.letter-date {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: right;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 17px;
+
+    color:
+        rgba(78,55,38,0.65);
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   LETTER HEADING
+===================================================== */
+
+.letter-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(42px, 12vw, 62px);
+
+    color: #3f2b20;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   HANDWRITTEN TEXT
+===================================================== */
+
+.handwritten-text {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size:
+        clamp(21px, 5.2vw, 28px);
+
+    line-height: 1.45;
+
+    color: #493426;
+}
+
+
+.handwritten-text p {
+
+    margin-bottom: 20px;
+
+    display: none;
+
+    opacity: 0;
+}
+
+
+.handwritten-text p.visible {
+
+    display: block;
+
+    opacity: 1;
+}
+
+
+.typing-cursor::after {
+
+    content: "▌";
+
+    display: inline-block;
+
+    margin-left: 2px;
+
+    animation:
+        cursorBlink
+        0.7s
+        infinite;
+}
+
+
+@keyframes cursorBlink {
+
+    0%,
+    45% {
+
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   EMPHASIS
+===================================================== */
+
+.handwritten-text .emphasis {
+
+    font-size: 1.05em;
+
+    color: #38251b;
+}
+
+
+/* =====================================================
+   SIGNATURE
+===================================================== */
+
+.handwritten-signature {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 30px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(35px, 9vw, 48px);
+
+    color: #3e291e;
+
+    line-height: 1.2;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+
+        opacity 1.5s ease,
+
+        transform 1.5s ease;
+}
+
+
+.handwritten-signature.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.signature-small {
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 22px;
+
+    display: block;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   FLOWER
+===================================================== */
+
+.tiny-flower {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 20px;
+
+    font-size: 32px;
+
+    transform:
+        rotate(-15deg);
+
+    opacity: 0.75;
+
+    z-index: 4;
+}
+
+
+/* =====================================================
+   PAPER CORNER
+===================================================== */
+
+.paper-corner {
+
+    position: absolute;
+
+    right: -1px;
+
+    bottom: -1px;
+
+    width: 55px;
+
+    height: 55px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            transparent 50%,
+            rgba(94,62,31,0.14) 51%
+        );
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   LETTER SCROLL INDICATOR
+===================================================== */
+
+.letter-scroll-indicator {
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(70,45,25,0.65);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+.letter-scroll-indicator.show {
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   FINAL PAGE
+===================================================== */
+
+.final-message h2 {
+
+    font-size:
+        clamp(45px, 13vw, 80px);
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+
+.final-message p {
+
+    max-width: 650px;
+
+    margin:
+        0
+        auto
+        20px;
+
+    font-size:
+        clamp(21px, 5.5vw, 29px);
+
+    line-height: 1.55;
+
+    color: #d5cdd1;
+}
+
+
+.final-heart {
+
+    margin-top: 30px;
+
+    font-size: 45px;
+
+    animation:
+        heartbeat
+        1.8s
+        infinite;
+}
+
+
+/* =====================================================
+   CLICK HINT
+===================================================== */
+
+.click-hint {
+
+    margin-top: 35px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #81777c;
+
+    text-transform: uppercase;
+
+    animation:
+        hintPulse
+        2s
+        infinite;
+}
+
+
+@keyframes hintPulse {
+
+    0%,
+    100% {
+
+        opacity: 0.35;
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navigation {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 15px;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        min(700px, 94vw);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+}
+
+
+.nav-button {
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    background:
+        rgba(15,15,20,0.78);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    color: #eee;
+
+    padding:
+        11px
+        17px;
+
+    border-radius: 30px;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    transition:
+        background 0.3s,
+        border 0.3s,
+        transform 0.3s;
+}
+
+
+.nav-button:active {
+
+    transform:
+        scale(0.94);
+}
+
+
+.nav-button:disabled {
+
+    opacity: 0.25;
+
+    cursor: not-allowed;
+}
+
+
+.page-counter {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #8f858a;
+}
+
+
+/* =====================================================
+   HEART BURST
+===================================================== */
+
+.burst-heart {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 200;
+
+    font-size: 20px;
+
+    animation:
+        burst
+        0.9s
+        ease-out
+        forwards;
+}
+
+
+@keyframes burst {
+
+    0% {
+
+        transform:
+            translate(0,0)
+            scale(0.3);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(1.4)
+            rotate(var(--r));
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding:
+            45px
+            15px
+            90px;
+    }
+
+
+    .content {
+
+        width: 94vw;
+
+        max-height:
+            calc(100dvh - 125px);
+    }
+
+
+    .chapter h2 {
+
+        margin-bottom: 22px;
+    }
+
+
+    .story-text {
+
+        font-size: 19px;
+
+        line-height: 1.5;
+    }
+
+
+    .quote {
+
+        padding: 17px;
+
+        margin:
+            23px
+            auto;
+    }
+
+
+    .answer-box {
+
+        padding: 21px;
+    }
+
+
+    /* LETTER */
+
+    .letter-page {
+
+        padding:
+            25px
+            8px
+            80px;
+    }
+
+
+    .ancient-letter-wrapper {
+
+        width: 95vw;
+
+        height: 77dvh;
+    }
+
+
+    .ancient-letter {
+
+        padding:
+            48px
+            27px
+            75px;
+    }
+
+
+    .letter-heading {
+
+        font-size: 43px;
+    }
+
+
+    .handwritten-text {
+
+        font-size: 21px;
+
+        line-height: 1.43;
+    }
+
+
+    .handwritten-text p {
+
+        margin-bottom: 19px;
+    }
+
+
+    .handwritten-signature {
+
+        font-size: 37px;
+    }
+
+
+    .signature-small {
+
+        font-size: 20px;
+    }
+
+
+    .tiny-flower {
+
+        right: 17px;
+
+        bottom: 15px;
+
+        font-size: 27px;
+    }
+
+
+    .letter-tape {
+
+        width: 105px;
+
+        height: 29px;
+    }
+
+
+    .navigation {
+
+        bottom: 12px;
+
+        width: 94vw;
+    }
+
+
+    .nav-button {
+
+        padding:
+            10px
+            14px;
+
+        font-size: 9px;
+    }
+
+
+    .page-counter {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .page {
+
+        padding:
+            38px
+            12px
+            85px;
+    }
+
+
+    .story-text {
+
+        font-size: 18px;
+    }
+
+
+    .chapter h2 {
+
+        font-size: 37px;
+    }
+
+
+    .ancient-letter {
+
+        padding:
+            45px
+            22px
+            70px;
+    }
+
+
+    .handwritten-text {
+
+        font-size: 20px;
+    }
+
+
+    .nav-button {
+
+        padding:
+            9px
+            11px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div
+    class="background"
+    id="background"
+></div>
+
+
+<!-- =====================================================
+     STORY
+===================================================== -->
+
+<div id="story">
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="page active">
+
+    <div class="content cover">
+
+        <div class="cover-heart">
+            ❤️
+        </div>
+
+        <h1>
+            For you...
+        </h1>
+
+        <p>
+            There’s something I never told you properly.
+            <br><br>
+            Some feelings don't arrive all at once.
+            <br>
+            They slowly become a part of you.
+        </p>
+
+        <div class="click-hint">
+            Tap Next to begin
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 01
+        </div>
+
+        <h2>
+            I Didn't Fall for You at First
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                When I first saw you,
+                honestly...
+                I didn't feel anything special.
+            </p>
+
+            <p>
+                But slowly,
+                I started noticing little things about you.
+            </p>
+
+            <p>
+                Your childish behaviour.
+                The way you get excited about small things.
+                The way you tease.
+                Your laugh.
+                Your simplicity.
+                Your innocence.
+            </p>
+
+            <p>
+                Somehow,
+                I started looking forward to talking to you.
+            </p>
+
+            <p>
+                Waiting for your messages.
+                Remembering little things you said.
+                Thinking about you without even realizing it.
+            </p>
+
+            <div class="quote">
+
+                I didn't choose to fall for you.
+
+                <br>
+
+                It just happened.
+
+                <br>
+
+                Slowly.
+
+                Silently.
+
+            </div>
+
+            <p class="highlight">
+
+                And somewhere along the way...
+                I fell for you. ♡
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 02
+        </div>
+
+        <h2>
+            Somehow, You Became Special
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                It wasn't one big moment.
+            </p>
+
+            <p>
+                It was all the small ones.
+            </p>
+
+            <p>
+                Small conversations.
+                Random messages.
+                Teasing each other.
+                Your smile.
+                Those little moments that probably meant nothing to you.
+            </p>
+
+            <p>
+                But somehow,
+                they started meaning something to me.
+            </p>
+
+            <div class="quote">
+
+                You became a part of my day
+                without even asking for that place.
+
+            </div>
+
+            <p>
+                And before I realized it,
+                you had become someone
+                I genuinely cared about.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 03
+        </div>
+
+        <h2>
+            The Day I Finally Told You
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                I carried those feelings for a long time.
+            </p>
+
+            <p>
+                I was scared.
+            </p>
+
+            <p>
+                Scared that things might change.
+                Scared that I might lose the friendship we had.
+            </p>
+
+            <p>
+                But at some point,
+                I realized that keeping everything inside
+                was harder than being honest.
+            </p>
+
+            <div class="quote">
+                So I chose honesty over fear.
+            </div>
+
+            <p>
+                And I finally told you
+                that I liked you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 5
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 04
+        </div>
+
+        <h2>
+            Your Answer
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                And you told me...
+            </p>
+
+            <div class="answer-box">
+
+                <div class="small">
+                    Your words
+                </div>
+
+                <div class="answer">
+                    "You're my good friend."
+                </div>
+
+            </div>
+
+            <p>
+                I understood.
+            </p>
+
+            <p>
+                And I respected your feelings.
+            </p>
+
+            <p>
+                You didn't do anything wrong.
+            </p>
+
+            <p>
+                Sometimes,
+                two people can care about each other
+                and still feel differently.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 6
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 05
+        </div>
+
+        <h2>
+            Why I Took a Step Back
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                I didn't step away because I was angry.
+            </p>
+
+            <p>
+                I didn't step away to punish you.
+            </p>
+
+            <p>
+                You did nothing wrong.
+            </p>
+
+            <p>
+                I just needed some time
+                to understand myself.
+            </p>
+
+            <p>
+                I wanted to accept your answer properly.
+            </p>
+
+            <p>
+                I wanted to learn how to see you
+                simply as my friend.
+            </p>
+
+            <div class="quote">
+
+                Sometimes distance isn't about leaving someone.
+
+                <br>
+
+                Sometimes it's about finding yourself again.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 7
+===================================================== -->
+
+<section class="page">
+
+    <div class="content chapter">
+
+        <div class="chapter-number">
+            Chapter 06
+        </div>
+
+        <h2>
+            I Tried to See You as a Friend
+        </h2>
+
+        <div class="story-text">
+
+            <p>
+                I really tried.
+            </p>
+
+            <p>
+                I told myself that friendship should be enough.
+            </p>
+
+            <p>
+                We talked again.
+                We laughed.
+                We teased each other.
+                We had our little conversations.
+            </p>
+
+            <p>
+                And for a while,
+                I thought maybe I was finally okay.
+            </p>
+
+            <p>
+                But slowly I realized something.
+            </p>
+
+            <div class="quote">
+
+                My feelings hadn't disappeared.
+
+            </div>
+
+            <p>
+                That's when I understood
+                that I needed another little distance.
+            </p>
+
+            <p class="highlight">
+
+                Not because I wanted to lose you.
+
+                <br>
+
+                But because I needed to be honest with myself.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 8 — ANCIENT LETTER
+===================================================== -->
+
+<section class="page letter-page">
+
+    <div class="ancient-letter-wrapper">
+
+        <div class="letter-tape"></div>
+
+        <div
+            class="ancient-letter"
+            id="ancientLetter"
+        >
+
+            <div class="letter-date">
+                A letter I never knew how to say...
+            </div>
+
+            <div class="letter-heading">
+                Dear you,
+            </div>
+
+
+            <!-- =================================================
+                 LETTER TEXT
+            ================================================== -->
+
+            <div
+                class="handwritten-text"
+                id="typedLetter"
+            >
+
+                <p>
+                    Unna pidikkum nu solla
+                    evlo vaati yosichirukken nu
+                    unakku theriyadhu.
+                </p>
+
+                <p>
+                    Aana, every time sollanum nu thonumbodhu,
+                    "Maybe nee deserve panra life-ku
+                    naan right person illa..."
+                    nu en mind dhaan ennai stop pannidum.
+                </p>
+
+                <p>
+                    Un kooda irukkanum nu aasai irukku.
+                    Aana adha vida,
+                    nee happy-ah irukkanum nu dhaan
+                    romba aasai.
+                </p>
+
+                <p>
+                    Adhanala,
+                    maybe idha naan sollaama irukradhe better.
+                </p>
+
+                <p>
+                    Unakku oru naal yaaravadhu kidaikkattum...
+                    unnoda love-ah full-ah appreciate
+                    pannura oruthar.
+                </p>
+
+                <p>
+                    Andha person naan illa naalum parava illa.
+                </p>
+
+                <p>
+                    Because naan unna love pannadhu,
+                    un life-la enakku oru place venum nu illa.
+                </p>
+
+                <p>
+                    Nee happy-ah irukkanum nu dhaan.
+                </p>
+
+                <p>
+                    Maybe you'll never know
+                    how much I thought about saying all this.
+                </p>
+
+                <p>
+                    But at least now,
+                    these words don't have to stay
+                    inside me anymore.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIGNATURE
+            ================================================== -->
+
+            <div
+                class="handwritten-signature"
+                id="letterSignature"
+            >
+
+                Love,
+
+                <span class="signature-small">
+
+                    The person who never said it.
+
+                    <br>
+
+                    — Haris
+
+                </span>
+
+            </div>
+
+
+            <div class="tiny-flower">
+                🌸
+            </div>
+
+            <div class="paper-corner"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 9
+===================================================== -->
+
+<section class="page">
+
+    <div class="content final-message">
+
+        <div class="chapter-number">
+            One Last Thing
+        </div>
+
+        <h2>
+            That's all.
+        </h2>
+
+        <p>
+            You don't have to answer this.
+        </p>
+
+        <p>
+            You don't have to change anything.
+        </p>
+
+        <p>
+            I just wanted you to know.
+        </p>
+
+        <p>
+            That's all.
+        </p>
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 10
+===================================================== -->
+
+<section class="page">
+
+    <div class="content final-message">
+
+        <div class="cover-heart">
+            ♡
+        </div>
+
+        <h2>
+            Some feelings...
+        </h2>
+
+        <p>
+            are simply meant to be felt.
+        </p>
+
+        <p>
+            Not everything needs an ending.
+
+            <br>
+
+            Some things can simply remain beautiful.
+        </p>
+
+        <div class="quote">
+
+            Thank you for being
+            a beautiful part of my story.
+
+        </div>
+
+        <div class="final-heart">
+            🌸
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<div class="navigation">
+
+    <button
+        class="nav-button"
+        id="backBtn"
+        type="button"
+    >
+        ← Back
+    </button>
+
+
+    <div
+        class="page-counter"
+        id="pageCounter"
+    >
+        01 / 10
+    </div>
+
+
+    <button
+        class="nav-button"
+        id="nextBtn"
+        type="button"
+    >
+        Next →
+    </button>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+const pages =
+    document.querySelectorAll(".page");
+
+const backBtn =
+    document.getElementById("backBtn");
+
+const nextBtn =
+    document.getElementById("nextBtn");
+
+const pageCounter =
+    document.getElementById("pageCounter");
+
+let currentPage = 0;
+
+let letterStarted = false;
+
+let letterTyping = false;
+
+
+/* =====================================================
+   SHOW PAGE
+===================================================== */
+
+function showPage(
+    newPage,
+    direction = "next"
+) {
+
+    if (
+        newPage < 0 ||
+        newPage >= pages.length ||
+        newPage === currentPage
+    ) {
+        return;
+    }
+
+
+    const oldPage =
+        pages[currentPage];
+
+
+    oldPage.classList.remove(
+        "active"
+    );
+
+
+    if (direction === "next") {
+
+        oldPage.classList.add(
+            "previous"
+        );
+
+    } else {
+
+        oldPage.classList.remove(
+            "previous"
+        );
+    }
+
+
+    currentPage =
+        newPage;
+
+
+    const newPageElement =
+        pages[currentPage];
+
+
+    newPageElement.classList.remove(
+        "previous"
+    );
+
+
+    void newPageElement.offsetWidth;
+
+
+    newPageElement.classList.add(
+        "active"
+    );
+
+
+    updateNavigation();
+
+
+    createHeartBurst();
+
+
+    setTimeout(
+        () => {
+
+            oldPage.classList.remove(
+                "previous"
+            );
+
+        },
+        800
+    );
+
+
+    /* =================================================
+       START LETTER
+    ================================================= */
+
+    if (currentPage === 7) {
+
+        setTimeout(
+            startAncientLetter,
+            800
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextPage() {
+
+    if (
+        currentPage <
+        pages.length - 1
+    ) {
+
+        showPage(
+            currentPage + 1,
+            "next"
+        );
+
+    } else {
+
+        /*
+           Replay
+        */
+
+        resetLetter();
+
+        currentPage = 0;
+
+        pages.forEach(
+            (page, index) => {
+
+                page.classList.remove(
+                    "active",
+                    "previous"
+                );
+
+            }
+        );
+
+
+        pages[0].classList.add(
+            "active"
+        );
+
+
+        updateNavigation();
+
+        createHeartBurst();
+    }
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+function previousPage() {
+
+    if (currentPage > 0) {
+
+        showPage(
+            currentPage - 1,
+            "back"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+function updateNavigation() {
+
+    const pageNumber =
+        String(
+            currentPage + 1
+        ).padStart(2, "0");
+
+
+    const totalPages =
+        String(
+            pages.length
+        ).padStart(2, "0");
+
+
+    pageCounter.textContent =
+        `${pageNumber} / ${totalPages}`;
+
+
+    backBtn.disabled =
+        currentPage === 0;
+
+
+    if (
+        currentPage ===
+        pages.length - 1
+    ) {
+
+        nextBtn.textContent =
+            "Replay ↻";
+
+    }
+
+    else if (
+        currentPage === 0
+    ) {
+
+        nextBtn.textContent =
+            "Begin →";
+
+    }
+
+    else {
+
+        nextBtn.textContent =
+            "Next →";
+
+    }
+
+}
+
+
+/* =====================================================
+   BUTTON EVENTS
+===================================================== */
+
+nextBtn.addEventListener(
+    "click",
+    nextPage
+);
+
+
+backBtn.addEventListener(
+    "click",
+    previousPage
+);
+
+
+/* =====================================================
+   KEYBOARD
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "ArrowRight" ||
+            event.key === "Enter"
+        ) {
+
+            event.preventDefault();
+
+            nextPage();
+
+        }
+
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            event.preventDefault();
+
+            previousPage();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MOBILE SWIPE
+===================================================== */
+
+let touchStartX = 0;
+
+let touchStartY = 0;
+
+let touchEndX = 0;
+
+let touchEndY = 0;
+
+
+document.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+        touchStartY =
+            event.changedTouches[0].screenY;
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        touchEndY =
+            event.changedTouches[0].screenY;
+
+
+        handleSwipe();
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+function handleSwipe() {
+
+    const differenceX =
+        touchEndX - touchStartX;
+
+    const differenceY =
+        touchEndY - touchStartY;
+
+
+    /*
+       Ignore vertical movement.
+    */
+
+    if (
+        Math.abs(differenceX) <
+        Math.abs(differenceY)
+    ) {
+
+        return;
+    }
+
+
+    /*
+       Minimum swipe distance
+    */
+
+    if (
+        Math.abs(differenceX) < 60
+    ) {
+
+        return;
+    }
+
+
+    /*
+       Swipe left = next
+       Swipe right = back
+    */
+
+    if (differenceX < 0) {
+
+        nextPage();
+
+    } else {
+
+        previousPage();
+
+    }
+
+}
+
+
+/* =====================================================
+   CREATE STARS
+===================================================== */
+
+function createStars() {
+
+    const background =
+        document.getElementById(
+            "background"
+        );
+
+
+    for (
+        let i = 0;
+        i < 90;
+        i++
+    ) {
+
+        const star =
+            document.createElement(
+                "div"
+            );
+
+
+        star.className =
+            "star";
+
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+
+        star.style.animationDelay =
+            Math.random() * 4 + "s";
+
+
+        star.style.animationDuration =
+            2 +
+            Math.random() * 4 +
+            "s";
+
+
+        background.appendChild(
+            star
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createFloatingHearts() {
+
+    const hearts = [
+        "♡",
+        "♥",
+        "❤️",
+        "💕",
+        "💗"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 14;
+        i++
+    ) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.textContent =
+            hearts[
+                Math.floor(
+                    Math.random() *
+                    hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 +
+            "%";
+
+
+        heart.style.fontSize =
+            12 +
+            Math.random() * 18 +
+            "px";
+
+
+        heart.style.animationDuration =
+            9 +
+            Math.random() * 10 +
+            "s";
+
+
+        heart.style.animationDelay =
+            Math.random() * 12 +
+            "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   PETALS
+===================================================== */
+
+function createPetals() {
+
+    const petals = [
+        "🌸",
+        "🌷",
+        "🌺",
+        "✿"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 12;
+        i++
+    ) {
+
+        const petal =
+            document.createElement(
+                "div"
+            );
+
+
+        petal.className =
+            "petal";
+
+
+        petal.textContent =
+            petals[
+                Math.floor(
+                    Math.random() *
+                    petals.length
+                )
+            ];
+
+
+        petal.style.left =
+            Math.random() * 100 +
+            "%";
+
+
+        petal.style.fontSize =
+            10 +
+            Math.random() * 13 +
+            "px";
+
+
+        petal.style.animationDuration =
+            8 +
+            Math.random() * 9 +
+            "s";
+
+
+        petal.style.animationDelay =
+            Math.random() * 10 +
+            "s";
+
+
+        document.body.appendChild(
+            petal
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING EMOJIS
+===================================================== */
+
+function createFloatingEmojis() {
+
+    const emojis = [
+        "✨",
+        "🦋",
+        "♡",
+        "✦",
+        "💕",
+        "🌙",
+        "⭐"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
+
+        const emoji =
+            document.createElement(
+                "div"
+            );
+
+
+        emoji.className =
+            "floating-emoji";
+
+
+        emoji.textContent =
+            emojis[
+                Math.floor(
+                    Math.random() *
+                    emojis.length
+                )
+            ];
+
+
+        emoji.style.left =
+            Math.random() * 100 +
+            "%";
+
+
+        emoji.style.fontSize =
+            12 +
+            Math.random() * 12 +
+            "px";
+
+
+        emoji.style.animationDuration =
+            12 +
+            Math.random() * 12 +
+            "s";
+
+
+        emoji.style.animationDelay =
+            Math.random() * 12 +
+            "s";
+
+
+        document.body.appendChild(
+            emoji
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   HEART BURST
+===================================================== */
+
+function createHeartBurst() {
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "♡",
+        "💗"
+    ];
+
+
+    for (
+        let i = 0;
+        i < 14;
+        i++
+    ) {
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "burst-heart";
+
+
+        heart.textContent =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+
+        heart.style.left =
+            "50%";
+
+
+        heart.style.top =
+            "50%";
+
+
+        const angle =
+            Math.random() *
+            Math.PI *
+            2;
+
+
+        const distance =
+            70 +
+            Math.random() *
+            160;
+
+
+        const x =
+            Math.cos(angle) *
+            distance;
+
+
+        const y =
+            Math.sin(angle) *
+            distance;
+
+
+        heart.style.setProperty(
+            "--x",
+            x + "px"
+        );
+
+
+        heart.style.setProperty(
+            "--y",
+            y + "px"
+        );
+
+
+        heart.style.setProperty(
+            "--r",
+            (
+                Math.random() *
+                90 -
+                45
+            ) + "deg"
+        );
+
+
+        heart.style.animationDelay =
+            Math.random() *
+            0.15 +
+            "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            () => {
+
+                heart.remove();
+
+            },
+            1100
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   PAGE 8 — TYPEWRITER
+===================================================== */
+
+function startAncientLetter() {
+
+    if (letterStarted) {
+
+        return;
+    }
+
+
+    letterStarted = true;
+
+    letterTyping = true;
+
+
+    const letter =
+        document.getElementById(
+            "ancientLetter"
+        );
+
+
+    const paragraphs =
+        document.querySelectorAll(
+            "#typedLetter p"
+        );
+
+
+    const signature =
+        document.getElementById(
+            "letterSignature"
+        );
+
+
+    /*
+       Reset scroll
+    */
+
+    letter.scrollTop = 0;
+
+
+    /*
+       Hide paragraphs
+    */
+
+    paragraphs.forEach(
+        paragraph => {
+
+            paragraph.classList.remove(
+                "visible"
+            );
+
+            paragraph.classList.remove(
+                "typing-cursor"
+            );
+
+        }
+    );
+
+
+    signature.classList.remove(
+        "show"
+    );
+
+
+    let paragraphIndex = 0;
+
+
+    /* =================================================
+       TYPE PARAGRAPH
+    ================================================= */
+
+    function typeParagraph() {
+
+        if (
+            paragraphIndex >=
+            paragraphs.length
+        ) {
+
+            finishLetter();
+
+            return;
+        }
+
+
+        const paragraph =
+            paragraphs[
+                paragraphIndex
+            ];
+
+
+        paragraph.classList.add(
+            "visible"
+        );
+
+
+        /*
+           Save original text
+        */
+
+        const originalText =
+            paragraph.textContent
+                .replace(/\s+/g, " ")
+                .trim();
+
+
+        paragraph.textContent = "";
+
+
+        paragraph.classList.add(
+            "typing-cursor"
+        );
+
+
+        let characterIndex = 0;
+
+
+        /* =================================================
+           TYPE EACH CHARACTER
+        ================================================= */
+
+        function typeCharacter() {
+
+            if (
+                characterIndex <
+                originalText.length
+            ) {
+
+                paragraph.textContent +=
+                    originalText.charAt(
+                        characterIndex
+                    );
+
+
+                characterIndex++;
+
+
+                autoScrollLetter();
+
+
+                /*
+                   Typing speed
+
+                   55ms per character
+                   works nicely on mobile.
+                */
+
+                setTimeout(
+                    typeCharacter,
+                    55
+                );
+
+            }
+
+            else {
+
+                paragraph.classList.remove(
+                    "typing-cursor"
+                );
+
+
+                paragraphIndex++;
+
+
+                /*
+                   Give reader time
+                   before next paragraph.
+                */
+
+                setTimeout(
+                    typeParagraph,
+                    1100
+                );
+
+            }
+
+        }
+
+
+        typeCharacter();
+
+    }
+
+
+    /*
+       Start typing
+    */
+
+    typeParagraph();
+
+
+    /* =================================================
+       AUTO SCROLL
+    ================================================= */
+
+    function autoScrollLetter() {
+
+        const maxScroll =
+            letter.scrollHeight -
+            letter.clientHeight;
+
+
+        if (
+            maxScroll <= 0
+        ) {
+
+            return;
+        }
+
+
+        const currentScroll =
+            letter.scrollTop;
+
+
+        /*
+           Start automatic scrolling
+           once the text reaches lower
+           part of the visible paper.
+        */
+
+        const visibleBottom =
+            currentScroll +
+            letter.clientHeight;
+
+
+        if (
+            visibleBottom >
+            letter.scrollHeight * 0.68
+        ) {
+
+            letter.scrollTo({
+
+                top:
+                    Math.min(
+                        currentScroll + 30,
+                        maxScroll
+                    ),
+
+                behavior:
+                    "smooth"
+
+            });
+
+        }
+
+    }
+
+
+    /* =================================================
+       FINISH
+    ================================================= */
+
+    function finishLetter() {
+
+        letterTyping = false;
+
+
+        setTimeout(
+            () => {
+
+                /*
+                   Show signature
+                */
+
+                signature.classList.add(
+                    "show"
+                );
+
+
+                /*
+                   Wait before moving
+                   to bottom.
+                */
+
+                setTimeout(
+                    () => {
+
+                        letter.scrollTo({
+
+                            top:
+                                letter.scrollHeight,
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+                    },
+                    1000
+                );
+
+
+            },
+            1300
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   RESET LETTER
+===================================================== */
+
+function resetLetter() {
+
+    letterStarted = false;
+
+    letterTyping = false;
+
+
+    const letter =
+        document.getElementById(
+            "ancientLetter"
+        );
+
+
+    const paragraphs =
+        document.querySelectorAll(
+            "#typedLetter p"
+        );
+
+
+    const signature =
+        document.getElementById(
+            "letterSignature"
+        );
+
+
+    if (!letter) {
+
+        return;
+    }
+
+
+    letter.scrollTop = 0;
+
+
+    paragraphs.forEach(
+        paragraph => {
+
+            paragraph.classList.remove(
+                "visible"
+            );
+
+            paragraph.classList.remove(
+                "typing-cursor"
+            );
+
+        }
+    );
+
+
+    signature.classList.remove(
+        "show"
+    );
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+createStars();
+
+createFloatingHearts();
+
+createPetals();
+
+createFloatingEmojis();
+
+updateNavigation();
+
+</script>
+
+</body>
+
+</html>
